@@ -1,7 +1,434 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-</head> 
-<body> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="en" data-theme="cyberpunk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davis Wabwile | Data Science Architect</title>
+    <meta name="description" content="AI/ML Engineer | Cybersecurity Specialist | Data Science Competitor">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Chakra+Petch:wght@400;600;700&display=swap" as="style">
+    <link rel="preload" href="style.css" as="style">
+    
+    <!-- Favicon with dark mode support -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0d0221">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Davis Wabwile | Data Science Architect">
+    <meta property="og:description" content="AI/ML Engineer | Cybersecurity Specialist | Data Science Competitor">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:image" content="https://yourdomain.com/images/social-preview.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yourhandle">
+</head>
+<body>
+    <!-- Cyberpunk Grid Overlay -->
+    <div class="cyber-grid" aria-hidden="true"></div>
+    
+    <!-- Matrix Background Canvas -->
+    <div class="matrix-container" aria-hidden="true">
+        <canvas id="matrixCanvas"></canvas>
+    </div>
+    
+    <!-- ARIA Live Region for Dynamic Content -->
+    <div id="aria-live" aria-live="polite" class="sr-only"></div>
+    
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header with Hologram Logo -->
+    <header class="neon-header">
+        <div class="container">
+            <div class="hologram-logo" role="img" aria-label="Davis Wabwile Logo">
+                <span aria-hidden="true">D</span>
+                <span aria-hidden="true">W</span>
+                <div class="hologram-effect" aria-hidden="true"></div>
+            </div>
+            
+            <nav class="cyber-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#about" class="nav-glow" data-text="About"><span class="nav-deco">#</span>About</a></li>
+                    <li><a href="#expertise" class="nav-glow" data-text="Expertise"><span class="nav-deco">#</span>Expertise</a></li>
+                    <li><a href="#competitions" class="nav-glow" data-text="Competitions"><span class="nav-deco">#</span>Competitions</a></li>
+                    <li><a href="#contact" class="nav-glow" data-text="Contact"><span class="nav-deco">#</span>Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <div class="bar"></div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section with Typing Effect -->
+        <section id="hero" class="datastream-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="title-deco" aria-hidden="true">//</span>
+                        <span class="title-main">Davis Wabwile</span>
+                    </h1>
+                    
+                    <div class="hero-tagline">
+                        <span class="tagline-part" data-text="Data">Data</span>
+                        <span class="tagline-slash" aria-hidden="true">/</span>
+                        <span class="tagline-part" data-text="Code">Code</span>
+                        <span class="tagline-slash" aria-hidden="true">/</span>
+                        <span class="tagline-part" data-text="Algorithms">Algorithms</span>
+                    </div>
+                    
+                    <p class="hero-subtitle typing" 
+                       data-strings='[
+                           "Extracting signals from noise through advanced computational analytics",
+                           "Building intelligent systems that solve real-world problems",
+                           "Transforming data into actionable insights",
+                           "Competitive data science practitioner"
+                       ]'>
+                    </p>
+                    
+                    <div class="hero-scroll">
+                        <span>Explore</span>
+                        <div class="scroll-arrow" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Particle Network Background -->
+            <canvas id="particleNetwork" class="particle-network" aria-hidden="true"></canvas>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section" data-section="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-num" aria-hidden="true">01</span>
+                        <span class="title-text">Professional Profile</span>
+                    </h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <!-- Bio Card -->
+                    <div class="about-card bio-card" data-tilt>
+                        <div class="card-header">
+                            <h3>Biography</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-user-astronaut" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p>Multidisciplinary technologist specializing in the intersection of data science, software engineering, and cybersecurity. Passionate about building intelligent systems that solve real-world problems.</p>
+                            <div class="bio-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-microchip" aria-hidden="true"></i>
+                                    <span>Data Science Specialist</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                                    <span>Cybersecurity Practitioner</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-robot" aria-hidden="true"></i>
+                                    <span>AI/ML Engineer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-cyber-border" aria-hidden="true"></div>
+                    </div>
+                    
+                    <!-- Roles Card -->
+                    <div class="about-card role-card" data-tilt>
+                        <div class="card-header">
+                            <h3>Roles</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-satellite-dish" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="role-tags">
+                                <span class="role-tag">IT Support Engineer</span>
+                                <span class="role-tag">Software Developer</span>
+                                <span class="role-tag">Data Scientist</span>
+                                <span class="role-tag">Cybersecurity Specialist</span>
+                            </div>
+                            <p>Bringing a unique cross-functional perspective to data challenges, combining infrastructure knowledge with advanced analytics capabilities.</p>
+                        </div>
+                        <div class="card-cyber-border" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section with Interactive Tabs -->
+        <section id="expertise" class="expertise-section" data-section="expertise">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-num" aria-hidden="true">02</span>
+                        <span class="title-text">Technical Arsenal</span>
+                    </h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                
+                <div class="expertise-tabs">
+                    <div class="tab-buttons" role="tablist">
+                        <button class="tab-button active" 
+                                data-tab="data-science" 
+                                role="tab" 
+                                aria-selected="true" 
+                                aria-controls="data-science-tab">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                            Data Science
+                        </button>
+                        <button class="tab-button" 
+                                data-tab="software-dev" 
+                                role="tab" 
+                                aria-selected="false" 
+                                aria-controls="software-dev-tab">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                            Software Dev
+                        </button>
+                        <button class="tab-button" 
+                                data-tab="cyber-security" 
+                                role="tab" 
+                                aria-selected="false" 
+                                aria-controls="cyber-security-tab">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                            Cybersecurity
+                        </button>
+                    </div>
+                    
+                    <!-- Data Science Tab -->
+                    <div class="tab-content active" 
+                         id="data-science-tab" 
+                         role="tabpanel" 
+                         aria-labelledby="data-science">
+                        <div class="skill-category">
+                            <h3 class="skill-header">
+                                <i class="fas fa-chart-line" aria-hidden="true"></i>
+                                Core Data Science
+                            </h3>
+                            <div class="skill-items">
+                                <!-- Skill items with progress bars -->
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Python</span>
+                                        <span>Expert</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 95%" data-level="95"></div>
+                                    </div>
+                                </div>
+                                <!-- More skill items... -->
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3 class="skill-header">
+                                <i class="fas fa-database" aria-hidden="true"></i>
+                                Data Engineering
+                            </h3>
+                            <div class="skill-items">
+                                <!-- Skill items with progress bars -->
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>SQL</span>
+                                        <span>Expert</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 90%" data-level="90"></div>
+                                    </div>
+                                </div>
+                                <!-- More skill items... -->
+                            </div>
+                        </div>
+                        
+                        <!-- 3D Skill Visualization -->
+                        <div class="skill-visualization">
+                            <canvas id="skillsChart" class="skills-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- Other tabs would follow similar structure -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Competition Showcase with Interactive Cards -->
+        <section id="competitions" class="competitions-section" data-section="competitions">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-num" aria-hidden="true">03</span>
+                        <span class="title-text">Competition Showcase</span>
+                    </h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                
+                <div class="competition-grid">
+                    <!-- Competition Card 1 -->
+                    <div class="competition-card" data-competition="kaggle-house-prices">
+                        <div class="competition-header">
+                            <div class="competition-platform">
+                                <img src="images/kaggle-logo.webp" alt="Kaggle" loading="lazy">
+                                <span>Kaggle</span>
+                            </div>
+                            <div class="competition-rank">
+                                Top 15%
+                            </div>
+                        </div>
+                        <h3 class="competition-title">House Prices: Advanced Regression Techniques</h3>
+                        <p class="competition-desc">Predicting residential home prices using 79 explanatory variables with advanced feature engineering and ensemble methods.</p>
+                        <div class="competition-tech">
+                            <span>Python</span>
+                            <span>XGBoost</span>
+                            <span>Feature Engineering</span>
+                        </div>
+                        <div class="competition-links">
+                            <a href="#" class="competition-link">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                View Competition
+                            </a>
+                            <a href="#" class="competition-link">
+                                <i class="fas fa-download" aria-hidden="true"></i>
+                                Download Notebook
+                            </a>
+                        </div>
+                        <div class="card-hover-effect" aria-hidden="true"></div>
+                    </div>
+                    
+                    <!-- More competition cards... -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section with Form Validation -->
+        <section id="contact" class="contact-section" data-section="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-num" aria-hidden="true">04</span>
+                        <span class="title-text">Connect</span>
+                    </h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <!-- Contact info items... -->
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Name</label>
+                                <input type="text" id="name" placeholder="Name" required>
+                                <div class="form-validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Email</label>
+                                <input type="email" id="email" placeholder="Email" required>
+                                <div class="form-validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="sr-only">Message</label>
+                                <textarea id="message" placeholder="Message" required></textarea>
+                                <div class="form-validation"></div>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Social Links -->
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="hologram-logo small" role="img" aria-label="DW Logo">
+                        <span aria-hidden="true">D</span>
+                        <span aria-hidden="true">W</span>
+                    </div>
+                    <p>Data Science Innovator</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#expertise">Expertise</a></li>
+                        <li><a href="#competitions">Competitions</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/yourprofile" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://kaggle.com/yourprofile" aria-label="Kaggle">
+                            <i class="fab fa-kaggle"></i>
+                        </a>
+                        <a href="https://twitter.com/yourhandle" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; <span id="current-year"></span> Davis Wabwile. All code and designs crafted with precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
