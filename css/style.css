@@ -1,0 +1,834 @@
+# Modern Portfolio Implementation
+
+I'll combine your GitHub README and portfolio HTML into a comprehensive, modern portfolio with interactive elements. Here's the complete implementation:
+
+## Complete `index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en" data-theme="cyberpunk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davis Wabwile | Cloud-Native Engineer & AI Solutions Architect</title>
+    <meta name="description" content="Cloud-Native Engineer, Fullstack Developer & AI Solutions Architect. Multi-Cloud Specialist, Distributed Systems Expert, MLOps Engineer, and Security Champion.">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Chakra+Petch:wght@400;600;700&display=swap" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    
+    <!-- Favicon with dark mode support -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0d0221">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Davis Wabwile | Cloud-Native Engineer & AI Solutions Architect">
+    <meta property="og:description" content="Multi-Cloud Specialist, Distributed Systems Expert, MLOps Engineer, and Security Champion">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alphadavethedon.github.io">
+    <meta property="og:image" content="https://alphadavethedon.github.io/images/social-preview.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@Alphadavethedon">
+</head>
+<body>
+    <!-- Cyberpunk Grid Overlay -->
+    <div class="cyber-grid" aria-hidden="true"></div>
+    
+    <!-- Matrix Background Canvas -->
+    <div class="matrix-container" aria-hidden="true">
+        <canvas id="matrixCanvas"></canvas>
+    </div>
+    
+    <!-- ARIA Live Region for Dynamic Content -->
+    <div id="aria-live" aria-live="polite" class="sr-only"></div>
+    
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header with Hologram Logo -->
+    <header class="neon-header">
+        <div class="container">
+            <div class="hologram-logo" role="img" aria-label="Davis Wabwile Logo">
+                <span aria-hidden="true">D</span>
+                <span aria-hidden="true">W</span>
+                <div class="hologram-effect" aria-hidden="true"></div>
+            </div>
+            
+            <nav class="cyber-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#about" class="nav-glow" data-text="About"><span class="nav-deco">#</span>About</a></li>
+                    <li><a href="#expertise" class="nav-glow" data-text="Expertise"><span class="nav-deco">#</span>Expertise</a></li>
+                    <li><a href="#projects" class="nav-glow" data-text="Projects"><span class="nav-deco">#</span>Projects</a></li>
+                    <li><a href="#contact" class="nav-glow" data-text="Contact"><span class="nav-deco">#</span>Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <div class="bar"></div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section with Typing Effect -->
+        <section id="hero" class="datastream-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="title-deco" aria-hidden="true">//</span>
+                        <span class="title-main">Davis Wabwile</span>
+                    </h1>
+                    
+                    <div class="hero-tagline">
+                        <span class="tagline-part" data-text="Cloud">Cloud</span>
+                        <span class="tagline-slash" aria-hidden="true">/</span>
+                        <span class="tagline-part" data-text="AI">AI</span>
+                        <span class="tagline-slash" aria-hidden="true">/</span>
+                        <span class="tagline-part" data-text="Security">Security</span>
+                    </div>
+                    
+                    <p class="hero-subtitle typing" 
+                       data-strings='[
+                           "Building scalable, resilient cloud-native systems",
+                           "Designing AI solutions with production-grade MLOps",
+                           "Implementing Zero Trust security architectures",
+                           "Cloud-Native Engineer, Fullstack Developer & AI Solutions Architect"
+                       ]'>
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                        <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    </div>
+                    
+                    <div class="hero-scroll">
+                        <span>Explore</span>
+                        <div class="scroll-arrow" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Particle Network Background -->
+            <canvas id="particleNetwork" class="particle-network" aria-hidden="true"></canvas>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section" data-section="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-num" aria-hidden="true">01</span>
+                        <span class="title-text">Professional Profile</span>
+                    </h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <!-- Bio Card -->
+                    <div class="about-card bio-card" data-tilt>
+                        <div class="card-header">
+                            <h3>Biography</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-user-astronaut" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Polyglot engineer</strong> specializing in <strong>cloud-native architectures</strong>, <strong>AI/ML systems</strong>, and <strong>secure distributed applications</strong>. Passionate about building <strong>scalable, resilient systems</strong> with <strong>observability-first</strong> approaches and <strong>GitOps workflows</strong>.</p>
+                            <div class="bio-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-cloud" aria-hidden="true"></i>
+                                    <span>Multi-Cloud Specialist</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-robot" aria-hidden="true"></i>
+                                    <span>AI Solutions Architect</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                                    <span>Security Champion</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-cyber-border" aria-hidden="true"></div>
+                    </div>
+                    
+                    <!-- Mindmap Visualization -->
+                    <div class="about-card mindmap-card">
+                        <div class="mindmap-container">
+                            <div class="mindmap-node root-node">
+                                <div class="node-content">Davis Wabwile</div>
+                                <div class="node-connector"></div>
+                            </div>
+                            
+                            <div class="mindmap-branch cloud-branch">
+                                <div class="mindmap-node">
+                                    <div class="node-content">Cloud-Native</div>
+                                    <div class="node-connector"></div>
+                                </div>
+                                <div class="mindmap-leaf">
+                                    <div class="node-content">Kubernetes</div>
+                                </div>
+                                <div class="mindmap-leaf">
+                                    <div class="node-content">Service Mesh</div>
+                                </div>
+                                <div class="mindmap-leaf">
+                                    <div class="node-content">Serverless</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mindmap-branch ai-branch">
+                                <div class="mindmap-node">
+                                    <div class="node-content">AI/ML Systems</div>
+                                    <div class="node-connector"></div>
+                                </div>
+                                <div class="mindmap-leaf">
+                                    <div class="node-content">MLOps</div>
+                                </div>
+                                <div class="mindmap-leaf">
+                                    <div class="node-content">LLMOps</div>
+                                </div>
+                                <div class="mindmap-leaf">
+                                    <div class="node-content">Vector DBs</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mindmap-branch security-branch">
+                                <div class="mindmap-node">
+                                    <div class="node-content">Security</div>
+                                    <div class="node-connector"></div>
+                                </div>
+                                <div class="mindmap-leaf">
+                                    <div class="node-content">Zero Trust</div>
+                                </div>
+                                <div class="mindmap-leaf">
+                                    <div class="node-content">Confidential Computing</div>
+                                </div>
+                                <div class="mindmap-leaf">
+                                    <div class="node-content">Threat Modeling</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section with Interactive Tabs -->
+        <section id="expertise" class="expertise-section" data-section="expertise">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-num" aria-hidden="true">02</span>
+                        <span class="title-text">Technical Arsenal</span>
+                    </h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                
+                <div class="expertise-tabs">
+                    <div class="tab-buttons" role="tablist">
+                        <button class="tab-button active" 
+                                data-tab="cloud-native" 
+                                role="tab" 
+                                aria-selected="true" 
+                                aria-controls="cloud-native-tab">
+                            <i class="fas fa-cloud" aria-hidden="true"></i>
+                            Cloud-Native
+                        </button>
+                        <button class="tab-button" 
+                                data-tab="ai-ml" 
+                                role="tab" 
+                                aria-selected="false" 
+                                aria-controls="ai-ml-tab">
+                            <i class="fas fa-robot" aria-hidden="true"></i>
+                            AI/ML
+                        </button>
+                        <button class="tab-button" 
+                                data-tab="security" 
+                                role="tab" 
+                                aria-selected="false" 
+                                aria-controls="security-tab">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                            Security
+                        </button>
+                    </div>
+                    
+                    <!-- Cloud-Native Tab -->
+                    <div class="tab-content active" 
+                         id="cloud-native-tab" 
+                         role="tabpanel" 
+                         aria-labelledby="cloud-native">
+                        <div class="skill-category">
+                            <h3 class="skill-header">
+                                <i class="fas fa-server" aria-hidden="true"></i>
+                                Cloud Platforms
+                            </h3>
+                            <div class="skill-badges">
+                                <span class="skill-badge" data-tooltip="AWS Professional Certified">
+                                    <img src="https://img.shields.io/badge/-AWS_Professional-FF9900?logo=amazonaws&logoColor=white" alt="AWS Pro">
+                                </span>
+                                <span class="skill-badge" data-tooltip="Certified Kubernetes Administrator">
+                                    <img src="https://img.shields.io/badge/-CKA-326CE5?logo=kubernetes&logoColor=white" alt="CKA">
+                                </span>
+                                <span class="skill-badge" data-tooltip="Certified Kubernetes Application Developer">
+                                    <img src="https://img.shields.io/badge/-CKAD-326CE5?logo=kubernetes&logoColor=white" alt="CKAD">
+                                </span>
+                                <span class="skill-badge" data-tooltip="Certified Kubernetes Security Specialist">
+                                    <img src="https://img.shields.io/badge/-CKS-326CE5?logo=kubernetes&logoColor=white" alt="CKS">
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3 class="skill-header">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Development
+                            </h3>
+                            <div class="skill-badges">
+                                <span class="skill-badge" data-tooltip="Rust - Systems Programming">
+                                    <img src="https://img.shields.io/badge/-Rust-000000?logo=rust&logoColor=white" alt="Rust">
+                                </span>
+                                <span class="skill-badge" data-tooltip="Go - Cloud Native Development">
+                                    <img src="https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white" alt="Go">
+                                </span>
+                                <span class="skill-badge" data-tooltip="WebAssembly - Edge Computing">
+                                    <img src="https://img.shields.io/badge/-Wasm-654FF0?logo=webassembly&logoColor=white" alt="Wasm">
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- 3D Skill Visualization -->
+                        <div class="skill-visualization">
+                            <canvas id="cloudSkillsChart" class="skills-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- AI/ML Tab -->
+                    <div class="tab-content" 
+                         id="ai-ml-tab" 
+                         role="tabpanel" 
+                         aria-labelledby="ai-ml">
+                        <div class="skill-category">
+                            <h3 class="skill-header">
+                                <i class="fas fa-brain" aria-hidden="true"></i>
+                                AI/ML Frameworks
+                            </h3>
+                            <div class="skill-badges">
+                                <span class="skill-badge" data-tooltip="PyTorch - Deep Learning">
+                                    <img src="https://img.shields.io/badge/-PyTorch-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch">
+                                </span>
+                                <span class="skill-badge" data-tooltip="TensorRT - Inference Optimization">
+                                    <img src="https://img.shields.io/badge/-TensorRT-FF6F00?logo=nvidia&logoColor=white" alt="TensorRT">
+                                </span>
+                                <span class="skill-badge" data-tooltip="Ray - Distributed Computing">
+                                    <img src="https://img.shields.io/badge/-Ray-028CF0?logo=ray&logoColor=white" alt="Ray">
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3 class="skill-header">
+                                <i class="fas fa-database" aria-hidden="true"></i>
+                                Data Infrastructure
+                            </h3>
+                            <div class="skill-badges">
+                                <span class="skill-badge" data-tooltip="Weaviate - Vector Database">
+                                    <img src="https://img.shields.io/badge/-Weaviate-00A98F?logo=weaviate&logoColor=white" alt="Weaviate">
+                                </span>
+                                <span class="skill-badge" data-tooltip="LangChain - LLM Orchestration">
+                                    <img src="https://img.shields.io/badge/-LangChain-00A67E?logo=langchain&logoColor=white" alt="LangChain">
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-visualization">
+                            <canvas id="aiSkillsChart" class="skills-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- Security Tab -->
+                    <div class="tab-content" 
+                         id="security-tab" 
+                         role="tabpanel" 
+                         aria-labelledby="security">
+                        <div class="skill-category">
+                            <h3 class="skill-header">
+                                <i class="fas fa-lock" aria-hidden="true"></i>
+                                Security Frameworks
+                            </h3>
+                            <div class="skill-badges">
+                                <span class="skill-badge" data-tooltip="Open Policy Agent - Policy as Code">
+                                    <img src="https://img.shields.io/badge/-OPA-7D1DFF?logo=opa&logoColor=white" alt="OPA">
+                                </span>
+                                <span class="skill-badge" data-tooltip="Falco - Runtime Security">
+                                    <img src="https://img.shields.io/badge/-Falco-00C1B2?logo=falco&logoColor=white" alt="Falco">
+                                </span>
+                                <span class="skill-badge" data-tooltip="Sigstore - Supply Chain Security">
+                                    <img src="https://img.shields.io/badge/-Sigstore-1A1F71?logo=sigstore&logoColor=white" alt="Sigstore">
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3 class="skill-header">
+                                <i class="fas fa-certificate" aria-hidden="true"></i>
+                                Certifications
+                            </h3>
+                            <div class="skill-badges">
+                                <span class="skill-badge" data-tooltip="Certified Information Systems Security Professional">
+                                    <img src="https://img.shields.io/badge/-CISSP-FF9900?logo=isc2&logoColor=white" alt="CISSP">
+                                </span>
+                                <span class="skill-badge" data-tooltip="Certified Cloud Security Professional">
+                                    <img src="https://img.shields.io/badge/-CCSP-FF9900?logo=isc2&logoColor=white" alt="CCSP">
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-visualization">
+                            <canvas id="securitySkillsChart" class="skills-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section" data-section="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-num" aria-hidden="true">03</span>
+                        <span class="title-text">Featured Projects</span>
+                    </h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-project="fraud-detection">
+                        <div class="project-header">
+                            <div class="project-badges">
+                                <span class="project-badge">Kafka</span>
+                                <span class="project-badge">Spark</span>
+                                <span class="project-badge">MLflow</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Alphadavethedon/Mobile-Money-Fraud-Detection-Real-Time-Data-Pipeline" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Mobile Money Fraud Detection</h3>
+                        <p class="project-desc">Real-time data pipeline simulating M-Pesa-like transactions with Kafka, Spark, Airflow, MLflow, and Streamlit.</p>
+                        <div class="project-tech">
+                            <span>Real-time Analytics</span>
+                            <span>Machine Learning</span>
+                            <span>Data Pipeline</span>
+                        </div>
+                        <div class="card-hover-effect" aria-hidden="true"></div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card" data-project="zero-trust">
+                        <div class="project-header">
+                            <div class="project-badges">
+                                <span class="project-badge">Istio</span>
+                                <span class="project-badge">Keycloak</span>
+                                <span class="project-badge">Zero Trust</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Alphadavethedon/zero-trust-proxy" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Zero Trust Proxy</h3>
+                        <p class="project-desc">Security proxy inspired by Google's BeyondCorp, integrated with Keycloak and Istio to enforce Zero Trust principles.</p>
+                        <div class="project-tech">
+                            <span>Security</span>
+                            <span>Identity</span>
+                            <span>Service Mesh</span>
+                        </div>
+                        <div class="card-hover-effect" aria-hidden="true"></div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card" data-project="cloud-optimizer">
+                        <div class="project-header">
+                            <div class="project-badges">
+                                <span class="project-badge">AI</span>
+                                <span class="project-badge">Multi-Cloud</span>
+                                <span class="project-badge">Cost Optimization</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Alphadavethedon/cloud-optimizer" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Cloud Cost Optimizer</h3>
+                        <p class="project-desc">AI-powered toolkit that applies ML and real-time analytics to reduce multi-cloud infrastructure costs.</p>
+                        <div class="project-tech">
+                            <span>Machine Learning</span>
+                            <span>Cloud</span>
+                            <span>FinOps</span>
+                        </div>
+                        <div class="card-hover-effect" aria-hidden="true"></div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card" data-project="log-analyzer">
+                        <div class="project-header">
+                            <div class="project-badges">
+                                <span class="project-badge">NLP</span>
+                                <span class="project-badge">Elasticsearch</span>
+                                <span class="project-badge">Transformers</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Alphadavethedon/log-analyzer" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">AI-Driven Log Analyzer</h3>
+                        <p class="project-desc">Log analysis tool that uses NLP (Hugging Face transformers) and Elasticsearch to extract insights from large-scale logs.</p>
+                        <div class="project-tech">
+                            <span>Natural Language Processing</span>
+                            <span>Observability</span>
+                            <span>Log Analysis</span>
+                        </div>
+                        <div class="card-hover-effect" aria-hidden="true"></div>
+                    </div>
+                </div>
+                
+                <div class="github-stats">
+                    <div class="stats-card">
+                        <img src="https://github-readme-stats.vercel.app/api?username=Alphadavethedon&show_icons=true&theme=radical" alt="GitHub Stats">
+                    </div>
+                    <div class="stats-card">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Alphadavethedon&layout=compact&theme=radical" alt="Top Languages">
+                    </div>
+                    <div class="stats-card">
+                        <img src="https://streak-stats.demolab.com?user=Alphadavethedon&theme=radical" alt="GitHub Streak">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section with Form Validation -->
+        <section id="contact" class="contact-section" data-section="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-num" aria-hidden="true">04</span>
+                        <span class="title-text">Connect</span>
+                    </h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card" data-tilt>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <a href="mailto:davewabwile@gmail.com">davewabwile@gmail.com</a>
+                        </div>
+                        
+                        <div class="contact-card" data-tilt>
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </div>
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/daviswabwile" target="_blank">linkedin.com/in/daviswabwile</a>
+                        </div>
+                        
+                        <div class="contact-card" data-tilt>
+                            <div class="contact-icon">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </div>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/Alphadavethedon" target="_blank">github.com/Alphadavethedon</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Name</label>
+                                <input type="text" id="name" placeholder="Name" required>
+                                <div class="form-validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Email</label>
+                                <input type="email" id="email" placeholder="Email" required>
+                                <div class="form-validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="sr-only">Message</label>
+                                <textarea id="message" placeholder="Message" required></textarea>
+                                <div class="form-validation"></div>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Social Links -->
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="hologram-logo small" role="img" aria-label="DW Logo">
+                        <span aria-hidden="true">D</span>
+                        <span aria-hidden="true">W</span>
+                    </div>
+                    <p>Cloud-Native Engineer & AI Solutions Architect</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#expertise">Expertise</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/Alphadavethedon" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/daviswabwile" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/Alphadavethedon" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:davewabwile@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; <span id="current-year"></span> Davis Wabwile. All code and designs crafted with precision.</p>
+                <div class="visitor-counter">
+                    <span>Visitors: </span>
+                    <img src="https://profile-counter.glitch.me/Alphadavethedon/count.svg" alt="Visitor Counter">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
+```
+
+## Complete `style.css`
+
+```css
+/* Base Styles & Variables */
+:root {
+    --primary: #00f0ff;
+    --secondary: #ff00f0;
+    --tertiary: #f0ff00;
+    --dark: #0d0221;
+    --darker: #070113;
+    --light: #f8f8f8;
+    --error: #ff3860;
+    --success: #09c372;
+    
+    --font-main: 'Space Grotesk', sans-serif;
+    --font-heading: 'Chakra Petch', sans-serif;
+    
+    --neon-glow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+    --neon-text-glow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--primary), 0 0 20px var(--primary);
+    
+    --transition-fast: all 0.2s ease;
+    --transition-medium: all 0.4s ease;
+    --transition-slow: all 0.6s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--dark);
+    color: var(--light);
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Cyberpunk Grid Overlay */
+.cyber-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(13, 2, 33, 0.9) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(13, 2, 33, 0.9) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Matrix Background */
+.matrix-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.1;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: var(--dark);
+    padding: 8px;
+    z-index: 100;
+    transition: var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+a:hover {
+    color: var(--secondary);
+    text-shadow: var(--neon-text-glow);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition-medium);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-heading);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--dark);
+    box-shadow: 0 0 10px var(--primary), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary);
+    color: var(--light);
+    box-shadow: 0 0 15px
