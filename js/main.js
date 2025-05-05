@@ -222,3 +222,17 @@ function initSkillCharts() {
                     data: [85, 80, 75, 82, 78, 70],
                     backgroundColor: [
                         'rgba(125, 
+
+                        <head>
+  <!-- Add these -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+</head>
+<body>
+  <!-- Your content -->
+  <script src="js/main.js"></script> <!-- This should come LAST -->
+</body>
+// In initMatrixBackground() and initParticleNetwork():
+canvas.width = document.documentElement.clientWidth;
+canvas.height = document.documentElement.clientHeight;
