@@ -1,0 +1,113 @@
+{
+    "name": "Davis Wabwile | Cloud-Native Engineer",
+    "short_name": "Don Dave",
+    "description": "Portfolio of Davis Wabwile - Cloud-Native Engineer, Fullstack Developer & AI Solutions Architect",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0d0221",
+    "theme_color": "#00f0ff",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "images/icons/icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "images/icons/icon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "images/icons/icon-128x128.png",
+        "sizes": "128x128",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "images/icons/icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "images/icons/icon-152x152.png",
+        "sizes": "152x152",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "images/icons/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "images/icons/icon-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "images/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "images/screenshots/screenshot1.webp",
+        "sizes": "1280x720",
+        "type": "image/webp",
+        "description": "Homepage showing hero section and skills"
+      },
+      {
+        "src": "images/screenshots/screenshot2.webp",
+        "sizes": "1280x720",
+        "type": "image/webp",
+        "description": "Projects section with interactive cards"
+      }
+    ],
+    "related_applications": [
+      {
+        "platform": "web",
+        "url": "https://alphadavethedon.github.io"
+      }
+    ],
+    "prefer_related_applications": false,
+    "shortcuts": [
+      {
+        "name": "About Me",
+        "short_name": "About",
+        "description": "View my professional profile",
+        "url": "/#about"
+      },
+      {
+        "name": "My Projects",
+        "short_name": "Projects",
+        "description": "See my featured work",
+        "url": "/#projects"
+      },
+      {
+        "name": "Contact Me",
+        "short_name": "Contact",
+        "description": "Get in touch",
+        "url": "/#contact"
+      }
+    ],
+    "categories": [
+      "technology",
+      "developer tools",
+      "education"
+    ],
+    "lang": "en-US",
+    "dir": "ltr",
+    "iarc_rating_id": "e84b072d-723b-4a15-8d4f-5e3b4e7e8a9a",
+    "display_override": ["standalone", "minimal-ui"],
+    "edge_side_panel": {
+      "preferred_width": 480
+    }
+  }
